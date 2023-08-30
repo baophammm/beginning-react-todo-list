@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import { useState } from 'react';
 import './App.css';
 
@@ -12,7 +11,7 @@ function App() {
     {
       id: 2,
       title: 'Go Grocery',
-      isComplete: true,
+      isComplete: false,
     },
     {
       id: 3,
@@ -20,6 +19,23 @@ function App() {
       isComplete: false,
     },
   ]);
+  // const [todos, setTodos] = useState([
+  //   {
+  //     id: 1,
+  //     title: 'Finish React Series',
+  //     isComplete: false,
+  //   },
+  //   {
+  //     id: 2,
+  //     title: 'Go Grocery',
+  //     isComplete: true,
+  //   },
+  //   {
+  //     id: 3,
+  //     title: 'Take over world',
+  //     isComplete: false,
+  //   },
+  // ]);
   return (
     <div className="todo-app-container">
       <div className="todo-app">
@@ -57,26 +73,25 @@ function App() {
               </button>
             </li>
           ))}
-
-          <div className="check-all-container">
-            <div>
-              <div className="button">Check All</div>
-            </div>
-            <span>3 items remaining</span>
-          </div>
-          <div className="other-buttons-container">
-            <div>
-              <button className="button filter-button filter-button-active">
-                All
-              </button>
-              <button className="button filter-button">Active</button>
-              <button className="button filter-button">Completed</button>
-            </div>
-            <div>
-              <button className="button">Clear completed</button>
-            </div>
-          </div>
         </ul>
+        <div className="check-all-container">
+          <div>
+            <div className="button">Check All</div>
+          </div>
+          <span>3 items remaining</span>
+        </div>
+        <div className="other-buttons-container">
+          <div>
+            <button className="button filter-button filter-button-active">
+              All
+            </button>
+            <button className="button filter-button">Active</button>
+            <button className="button filter-button">Completed</button>
+          </div>
+          <div>
+            <button className="button">Clear completed</button>
+          </div>
+        </div>
       </div>
     </div>
   );
